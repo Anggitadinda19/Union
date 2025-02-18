@@ -30,7 +30,9 @@ const userSchema = new mongoose.Schema(
     role: {
       type: String,
       required: [true, "Cabang harus di isi!"],
+   enum:["super admin","admin","user"]
     },
+
     menu: [String],
   },
   {

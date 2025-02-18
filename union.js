@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(helmet());
 app.use(helmet.hidePoweredBy({ setTo: "PHP 7.4.11" }));
 
-// app.use("/fotoProfile", express.static("./fotoProfile"));
+app.use("/dokumentasi", express.static("./imageLaporan"));
 // app.use("/formRegister", express.static("./formRegister"));
 // app.use("/formPengajuan", express.static("./formPengajuan"));
 
