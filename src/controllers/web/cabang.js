@@ -72,7 +72,7 @@ class Controller {
           namaClient: "$listClient.namaClient",
         },
       },
-      { $sort: { idCabang: 1 } },
+      { $sort: { namaCabang: 1 } },
     ])
       .then((response) => {
         res.status(200).json(response);

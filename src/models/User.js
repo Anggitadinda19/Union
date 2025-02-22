@@ -11,18 +11,18 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, "Password harus di isi!"],
     },
-    nama:{
-        type:String,
-        required:[true,"Nama harus di isi!"]
+    nama: {
+      type: String,
+      required: [true, "Nama harus di isi!"],
     },
     idClient: {
       type: String,
       required: [true, "Nama Perusahaan harus di isi!"],
     },
-    idCabang: {
-      type: String,
-      required: [true, "Nama Cabang harus di isi!"],
-    },
+    // idCabang: {
+    //   type: String,
+    //   required: [true, "Nama Cabang harus di isi!"],
+    // },
     perusahaan: {
       type: String,
       required: [true, "Nama Perusahaan harus di isi!"],
@@ -30,7 +30,7 @@ const userSchema = new mongoose.Schema(
     role: {
       type: String,
       required: [true, "Cabang harus di isi!"],
-   enum:["super admin","admin","user"]
+      enum: ["super admin", "admin", "user"],
     },
 
     menu: [String],

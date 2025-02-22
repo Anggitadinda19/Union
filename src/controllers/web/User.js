@@ -12,13 +12,13 @@ const router = express.Router();
 
 class Controller {
   static createUser(req, res, next) {
-    let { idClient, idCabang, perusahaan, nama, username, role } = req.body;
+    let { idClient, perusahaan, nama, username, role } = req.body;
     User.find({ username })
       .then((response) => {
+        console.log(response, "response");
         if (response.length === 0) {
           return User.create({
             idClient,
-            idCabang,
             perusahaan,
             nama,
             username,
@@ -156,6 +156,7 @@ class Controller {
         );
       })
       .then((updatedUser) => {
+        console.log(response, "cihuy");
         res
           .status(200)
           .json({ message: "User berhasil diperbarui", user: updatedUser });

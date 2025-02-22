@@ -41,7 +41,7 @@ class Controller {
           namaClient: "$Client.namaClient",
         },
       },
-      { $sort: { tglLaporan: 1 } },
+      { $sort: { tglLaporan: -1 } },
     ]).then((response) => {
       return response && response.length > 0 ? response[0] : null;
     });
