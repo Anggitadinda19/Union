@@ -11,13 +11,11 @@ class Controller {
     let { idRuangan, idShift, status, deskripsi, nfc, temuan } = req.body;
     let date = new Date();
     let tglLaporan = moment(date).format("YYYY-MM-DD");
-
     let namaRuangan = await Ruangan.findOne({ _id: ObjectId(idRuangan) }).then(
       (response) => {
         return response ? response.ruangan : "Ruangan Tidak Ditemukan";
       }
     );
-
     let namaShift = await Shift.findOne({ _id: ObjectId(idShift) }).then(
       (response) => {
         return response ? response.shift : "Shift Tidak Ditemukan";
